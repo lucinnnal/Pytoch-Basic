@@ -108,3 +108,11 @@ ten = torch.from_numpy(num)
 np.add(num, 1, out=num)
 print(f"num: {num}\n")
 print(f"ten: {ten}\n")
+
+# Convert to python data from tensor
+a = torch.ones((4,4))
+sum = torch.sum(a)
+sum_item = sum.item()
+
+print(sum, sum_item)
+print(f"sum_item dtype: {type(sum_item)}")
